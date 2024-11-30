@@ -73,7 +73,7 @@ const authController = {
       // Save refresh token to database
       await prisma.user.update({
         where: { id: user.id },
-        data: { refreshToken },
+        data: { Token },
       });
 
       res.json({

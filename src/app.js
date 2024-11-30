@@ -1,13 +1,31 @@
 const express = require('express');
+const passport = require('passport');
+const session = require('express-session');
+const path = require('path');
 const userRoutes = require('./routes/userRoutes');
 const postRoutes = require('./routes/postRoutes');
 const authRoutes = require('./routes/authRoutes');
 const { verifyToken } = require('./middleware/authMiddleware');
 
+// Import passport config
+require('./config/passport');
+
 const app = express();
 
 // Middleware
 app.use(express.json());
+app.use(session({
+    secret: process.env.SESSION_SECRET || 'your-secret-key',
+    resave: false,
+    saveUninitialized: false
+}));
+
+// Initialize Passport and restore authentication state from session
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Serve static files from uploads directory
+app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
 // Request logging middleware
 app.use((req, res, next) => {
