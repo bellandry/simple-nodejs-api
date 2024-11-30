@@ -48,8 +48,8 @@ A RESTful API backend built with Node.js and Express.js, designed to serve a Flu
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd flutter-nodejs-api
+   git clone https://github.com/bellandry/simple-nodejs-api.git
+   cd simple-nodejs-api
    ```
 
 2. Install dependencies:
@@ -192,6 +192,10 @@ The API returns appropriate HTTP status codes:
 3. Commit your changes
 4. Push to the branch
 5. Create a new Pull Request
+
+## Author
+
+- Built whith ❤️ by [Landry Bella](https://laclass.dev)
 
 ## License
 
