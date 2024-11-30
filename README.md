@@ -195,7 +195,7 @@ The API returns appropriate HTTP status codes:
 
 ## Author
 
-- Built whith ❤️ by [Landry Bella](https://laclass.dev)
+- Built with ❤️ by [Landry Bella](https://laclass.dev)
 
 ## License
 
