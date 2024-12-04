@@ -73,7 +73,7 @@ const authController = {
       // Save refresh token to database
       await prisma.user.update({
         where: { id: user.id },
-        data: { Token },
+        data: { refreshToken },
       });
 
       res.json({
@@ -88,7 +88,7 @@ const authController = {
         },
       });
     } catch (error) {
-      res.status(400).json({ error: error.message });
+      res.status(400).json({ error: error.message + "bz" });
     }
   },
 

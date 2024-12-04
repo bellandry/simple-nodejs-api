@@ -57,7 +57,7 @@ app.use('/api/auth', authRoutes);
 
 // Protected routes
 app.use('/api/users', verifyToken, userRoutes);
-app.use('/api/posts', verifyToken, postRoutes);
+app.use('/api/posts', postRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

@@ -72,7 +72,7 @@ A RESTful API backend built with Node.js and Express.js, designed to serve a Flu
 
 4. Run Prisma migrations:
    ```bash
-   npx prisma migrate dev
+   npm run db:push
    ```
 
 5. Create uploads directory:
