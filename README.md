@@ -62,6 +62,7 @@ A RESTful API backend built with Node.js and Express.js, designed to serve a Flu
    ```env
    DATABASE_URL="mysql://username:password@localhost:3306/your_database"
    JWT_SECRET="your-jwt-secret"
+   JWT_REFRESH_SECRET="your-jwt-refresh-secret"
    PORT=3000
    GOOGLE_CLIENT_ID="your-google-client-id"
    GOOGLE_CLIENT_SECRET="your-google-client-secret"
